@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="pokedex.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f00;
+      font-family: sans-serif;
+    }
+    #pokemon-list {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      width: 200px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+    }
+    #pokemon-list li {
+      cursor: pointer;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    #pokemon-list li:hover {
+      background-color: #f0f0f0;
+    }
+    #pokedex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    #left {
+      width: 50%;
+    }
+    #right {
+      width: 50%;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #stats {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+    #pokemonImage {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="pokedex">
+    <div id="left">
+    </div>
+    <div id="right">
+      <div id="stats">
+        <strong>Name:</strong> <span id="pokemonName"></span><br />
+        <strong>Type:</strong> <span id="pokemonTypes"></span><br />
+        <strong>Height:</strong> <span id="pokemonHeight"></span>m<br />
+        <strong>Weight:</strong> <span id="pokemonWeight"></span>kg<br />
+        <strong>Skill:</strong> <span id="pokemonSkills"></span>...
+      </div>
+      <div id="pokemonImageContainer">
+        <img id="pokemonImage" title="imagem pokemon" />
+      </div>
+    </div>
+  </div>
+
+  <ul id="pokemon-list">
+    <li data-id="1">Bulbasaur</li>
+    <li data-id="2">Ivysaur</li>
+    <li data-id="3">Venusaur</li>
+    <li data-id="4">Charmander</li>
+    <li data-id="5">Charmeleon</li>
+    <li data-id="6">Charizard</li>
+    <li data-id="7">Squirtle</li>
+    <li data-id="8">Wartortle</li>
+    <li data-id="9">Blastoise</li>
+    <li data-id="10">Caterpie</li>
+  </ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
